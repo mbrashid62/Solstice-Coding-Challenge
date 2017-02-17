@@ -1,0 +1,6 @@
+LICENSE.md
+README.md
+node_modules/*
+reports/*
+.idea
+npm-debug.log

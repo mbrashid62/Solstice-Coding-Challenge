@@ -1,0 +1,20 @@
+<div class="sidenav" ng-controller="SideNavCtrl as sideNav" layout="column" flex ng-init="sideNav.fetchContactsFromEP()">
+  <md-sidenav md-component-id="left" md-is-locked-open="$mdMedia('gt-xs')" md-whiteframe="5" flex>
+    <md-toolbar layout="column">
+      <div layout="row" hide-gt-xs>  <!-- CLOSE BUTTON - DISPLAYED ON SMALL SCREENS ONLY -->
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="sideNav.closeSideNav()" aria-label="Close Menu">
+          <md-icon>close</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <!-- VERTICAL MENU ITEMS -->
+    <md-list class="menu-items">
+      <md-list-item ng-click="sideNav.selectMenuItem(contact)" ng-repeat="contact in contacts">
+        <p ng-class="{'selected' : contact === sideNav.selected }"> {{ contact.name }} </p>
+      </md-list-item>
+    </md-list>
+
+  </md-sidenav>
+</div>

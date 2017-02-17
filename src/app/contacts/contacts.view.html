@@ -1,0 +1,53 @@
+<div class="contact-page" ng-controller="ContactsCtrl as contact" layout-margin>
+  <h3 class="md-headline">Contacts</h3>
+  <div>
+      <br/>
+      <h1>Contact Details</h1>
+      <br/>
+      <div class="container">
+        <div class="col-md-12">
+          <div class="contact-details">
+            <hr>
+            <div class="row">
+              <div class="col-md-4"><img src="{{contact.currentContactData.largeImageURL}}"></div>
+              <div class="col-md-4">
+                <h4>Name <h1><span class="name">{{ contact.currentContactData.name }} </span></h1></h4>
+                <h4>Company <h1><span class="company">{{ contact.currentContactData.company }} </span></h1></h4>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <h4>Phone </h4>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  {{ contact.currentContactData.phone.work }}
+                  <p class="badge badge-default badge-pill">Work</p>
+                </li>
+                <li class="list-group-item">
+                  {{ contact.currentContactData.phone.home }}
+                  <p class="badge badge-default badge-pill">Home</p>
+                </li>
+                <li class="list-group-item">
+                  {{ contact.currentContactData.phone.mobile}}
+                  <p class="badge badge-default badge-pill">Mobile</p>
+                </li>
+              </ul>
+
+            </div>
+            <hr>
+            <div class="row">
+              <h4>Address</h4>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  {{ contact.currentContactData.address.street}}
+                </li>
+                <li class="list-group-item">
+                  {{ contact.currentContactData.address.city}}, {{ contact.currentContactData.address.state}} {{ contact.currentContactData.address.zip}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
