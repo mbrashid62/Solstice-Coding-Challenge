@@ -43,7 +43,7 @@ gulp.task('serve', ['build', 'watch'], function() {
       baseDir: config.serve.baseDir                         // Serve the chosen folder.
     },
     open: false,                                            // Stop the browser from opening a new window automatically.
-    port: config.serve.port                                 // Decide which port to serve on. Default is 3000 for development and 4000 for production.
+    port: process.env.PORT || 3000                         // Decide which port to serve on. Default is 3000 for development and 4000 for production.
   })
 });
 
