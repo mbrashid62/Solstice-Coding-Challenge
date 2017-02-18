@@ -179,12 +179,33 @@ angular.module('sidenav.services.SideNav', [])
     return {
       fetchContactsFromEP: function() {
         return new Promise (function(resolve, reject) {
-          $http.get('https://s3.amazonaws.com/technical-challenge/Contacts_v2.json').
+
+          debugger;
+          // $httpProvider.defaults.headers.get = { 'ORIGIN': 'http://www.localhost:3000/' };
+
+          // var req  = {
+          //   method: 'GET',
+          //     url: 'https://s3.amazonaws.com/technical-challenge/Contacts_v2.json'
+          // };
+          //
+          // $http(req)
+          //     .then(function (response) {
+          //       debugger;
+          //       fetchedContacts = response.data;
+          //       resolve(response.data);
+          //     }, function (error) {
+          //           debugger;
+          //         reject(data); // todo: log error
+          //     });
+
+          $http.get('https://google.com/https://s3.amazonaws.com/technical-challenge/Contacts_v2.json').
           success(function(data, status, headers, config) {
+              debugger;
             fetchedContacts = data;
             resolve(data);
           }).
           error(function(data, status, headers, config) {
+              debugger;
             reject(data); // todo: log error
           });
         });
