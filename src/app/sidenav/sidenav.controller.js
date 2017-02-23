@@ -7,14 +7,18 @@ angular.module('sidenav.controllers.SideNavCtrl', [])
     ctrl.selected = $scope.contacts[0];
     // ctrl.contactItems = []; can be useful for tests later
 
+      debugger;
     ctrl.fetchContactsFromEP = function() {
+        debugger;
       SideNav.fetchContactsFromEP()
         .then(function(data) {
           // ctrl.contactItems = data; // can be useful for the sake of tests
+            debugger;
           $scope.contacts = data;
           $scope.$apply();
         })
         .catch(function(error) {
+            debugger;
           // todo: log error
         });
     };

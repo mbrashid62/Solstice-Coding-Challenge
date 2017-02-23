@@ -496,6 +496,7 @@ angular.module('sidenav.services.SideNav', [])
           //   reject(data); // todo: log error
           // });
             fetchedContacts = fetchedContactsHardCoded; // simulate successful ajax request
+            resolve(fetchedContacts);
         });
       },
       getFetchedContacts: function () {
